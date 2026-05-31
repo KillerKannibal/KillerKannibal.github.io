@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KillerKannibal | Systems Dev</title>
+    <style>
+    /* --- Strict Two-Color Terminal Styling --- */
+    :root {
+        --bg-color: #24272b;        /* Deep Onyx */
+        --text-color: #ffffff;      /* Muted Gray for low-priority text */
+        --terminal-green: #39ff14;  /* Pure Neon Accent */
+        --card-bg: #575757;         /* Slightly lighter black for depth */
+        --border-color: #30363d;    /* Subtle separation lines */
+    }
+
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    /* --- Header / Terminal Prompt --- */
+    header {
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .prompt {
+        color: var(--terminal-green);
+        font-weight: bold;
+    }
+
+    h1 {
+        color: #ffffff; /* High-contrast white for identity */
+        margin: 10px 0 5px 0;
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        color: var(--terminal-green); /* Converted to Green */
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    /* --- Project Grid --- */
+    .projects-title {
+        font-size: 1.4rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .project-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 24px;
+        margin-bottom: 25px;
+        transition: border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+        border-color: var(--terminal-green); /* Converted to Green */
+    }
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .project-title {
+        color: var(--terminal-green); /* Converted to Green */
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    .project-tech {
+        font-size: 0.85rem;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        padding: 4px 10px;
+        border-radius: 4px;
+        color: var(--terminal-green); /* Converted to Green */
+    }
+
+    .project-desc {
+        margin: 0 0 15px 0;
+        color: var(--text-color);
+    }
+
+    /* --- Links & Buttons --- */
+    a {
+        color: var(--terminal-green); /* Converted to Green */
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: transparent;
+        color: var(--terminal-green);
+        border: 1px solid var(--terminal-green);
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: rgba(57, 255, 20, 0.1);
+        text-decoration: none;
+    }
+
+    /* --- Footer --- */
+    footer {
+        margin-top: 60px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--text-color);
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="prompt">guest@killerkannibal:~ $ cat info.txt</div>
+            <h1>KillerKannibal</h1>
+            <p class="subtitle">Low-Level Systems & Kernel Developer</p>
+            <p>Building operating systems from the bare metal up. Focused on C, x86/x86_64 assembly, and kernel architecture simulation.</p>
+        </header>
+
+        <main>
+            <div class="prompt">guest@killerkannibal:~ $ ls -l ./projects</div>
+            <h2 class="projects-title">Selected Prototypes</h2>
+
+            <!--<div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">ExileOS-V2</h3>
+                    <span class="project-tech">C / x86_64 ASM</span>
+                </div>
+                <p class="project-desc">A from-scratch 64-bit operating system kernel transitioning to Long Mode architecture. Focused on custom memory management, descriptor tables (GDT/IDT), and low-level hardware control.</p>
+                <a href="https://github.com/KillerKannibal" class="btn" target="_blank">View Source</a>
+            </div> -->
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">ExileOS</h3>
+                    <span class="project-tech">C / x86 ASM</span>
+                </div>
+                <p class="project-desc">The original 32-bit monolithic operating system prototype. Features basic text-mode display drivers, and direct hardware interaction simulation.</p>
+                <a href="https://github.com/KillerKannibal/ExileOS" class="btn" target="_blank">View Source</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Vulume</h3>
+                    <span class="project-tech"> C# / .NET</span>
+                </div>
+                <p class="project-desc">A Customisable Windows 11 volume slider, written in C# using the .NET framework.</p>
+                <a href="https://github.com/KillerKannibal/Vulume" class="btn" target="_blank">View Source</a>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Exile Linux</h3>
+                    <span class="project-tech">C / Bash</span>
+                </div>
+                <p class="project-desc">Exile Linux is a custom Linux distribution designed for privacy and security, with as little proprietary software as possible it fits the GNU/Linux philosophy.</p>
+                <a href="https://github.com/ExileLinux/ExileLinux" class="btn" target="_blank">View Source</a>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 KillerKannibal. Built with raw HTML/CSS.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
