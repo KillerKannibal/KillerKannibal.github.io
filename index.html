@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KillerKannibal | Systems Dev</title>
+    <title>KillerKannibal - Low Level Developer</title>
     <style>
     /* --- Strict Two-Color Terminal Styling --- */
     :root {
         --bg-color: #24272b;        /* Deep Onyx */
-        --text-color: #ffffff;      /* Muted Gray for low-priority text */
+        --text-color: #ffffff;      /* High-contrast white for clarity */
         --terminal-green: #39ff14;  /* Pure Neon Accent */
-        --card-bg: #575757;         /* Slightly lighter black for depth */
+        --card-bg: #32363c;         /* Bumped up slightly for visible contrast against deep onyx */
         --border-color: #30363d;    /* Subtle separation lines */
     }
 
@@ -42,13 +42,13 @@
     }
 
     h1 {
-        color: #ffffff; /* High-contrast white for identity */
+        color: #ffffff;
         margin: 10px 0 5px 0;
         font-size: 2rem;
     }
 
     .subtitle {
-        color: var(--terminal-green); /* Converted to Green */
+        color: var(--terminal-green);
         margin: 0;
         font-size: 1.1rem;
         font-weight: bold;
@@ -59,8 +59,6 @@
         font-size: 1.4rem;
         color: #ffffff;
         margin-bottom: 20px;
-        display: flex;
-        align-items: center;
     }
 
     .project-card {
@@ -69,11 +67,12 @@
         border-radius: 6px;
         padding: 24px;
         margin-bottom: 25px;
-        transition: border-color 0.2s ease;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .project-card:hover {
-        border-color: var(--terminal-green); /* Converted to Green */
+        border-color: var(--terminal-green);
+        box-shadow: 0 0 10px rgba(57, 255, 20, 0.15); /* Soft cyber glow on hover */
     }
 
     .project-header {
@@ -84,7 +83,7 @@
     }
 
     .project-title {
-        color: var(--terminal-green); /* Converted to Green */
+        color: var(--terminal-green);
         font-size: 1.3rem;
         margin: 0;
     }
@@ -95,7 +94,7 @@
         border: 1px solid var(--border-color);
         padding: 4px 10px;
         border-radius: 4px;
-        color: var(--terminal-green); /* Converted to Green */
+        color: var(--terminal-green);
     }
 
     .project-desc {
@@ -105,7 +104,7 @@
 
     /* --- Links & Buttons --- */
     a {
-        color: var(--terminal-green); /* Converted to Green */
+        color: var(--terminal-green);
         text-decoration: none;
     }
 
@@ -156,31 +155,22 @@
             <div class="prompt">guest@killerkannibal:~ $ ls -l ./projects</div>
             <h2 class="projects-title">Selected Prototypes</h2>
 
-            <!--<div class="project-card">
-                <div class="project-header">
-                    <h3 class="project-title">ExileOS-V2</h3>
-                    <span class="project-tech">C / x86_64 ASM</span>
-                </div>
-                <p class="project-desc">A from-scratch 64-bit operating system kernel transitioning to Long Mode architecture. Focused on custom memory management, descriptor tables (GDT/IDT), and low-level hardware control.</p>
-                <a href="https://github.com/KillerKannibal" class="btn" target="_blank">View Source</a>
-            </div> -->
-
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">ExileOS</h3>
                     <span class="project-tech">C / x86 ASM</span>
                 </div>
                 <p class="project-desc">The original 32-bit monolithic operating system prototype. Features basic text-mode display drivers, and direct hardware interaction simulation.</p>
-                <a href="https://github.com/KillerKannibal/ExileOS" class="btn" target="_blank">View Source</a>
+                <a href="https://github.com/KillerKannibal/ExileOS" class="btn" target="_blank" rel="noopener noreferrer">View Source</a>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">Vulume</h3>
-                    <span class="project-tech"> C# / .NET</span>
+                    <span class="project-tech">C# / .NET</span>
                 </div>
-                <p class="project-desc">A Customisable Windows 11 volume slider, written in C# using the .NET framework.</p>
-                <a href="https://github.com/KillerKannibal/Vulume" class="btn" target="_blank">View Source</a>
+                <p class="project-desc">A customisable Windows 11 volume slider, written in C# using the .NET framework.</p>
+                <a href="https://github.com/KillerKannibal/Vulume" class="btn" target="_blank" rel="noopener noreferrer">View Source</a>
             </div>
             
             <div class="project-card">
@@ -189,7 +179,7 @@
                     <span class="project-tech">C / Bash</span>
                 </div>
                 <p class="project-desc">Exile Linux is a custom Linux distribution designed for privacy and security, with as little proprietary software as possible it fits the GNU/Linux philosophy.</p>
-                <a href="https://github.com/Exile-Linux/Exile-Linux" class="btn" target="_blank">View Source</a>
+                <a href="https://github.com/Exile-Linux/Exile-Linux" class="btn" target="_blank" rel="noopener noreferrer">View Source</a>
             </div>
 
         </main>
